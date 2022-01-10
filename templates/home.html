@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <h1 class="display-4 fw-normal">Welcome to FlaskApp</h1>
+    <p class="fs-5 text-muted">This application is built on the Python Flask framework and is the focus for the "Python Flask From Scratch".</p>
+
+    {% if session.logged_in ==NULL %}
+      <a href="/register" class="btn btn-primary btn-lg">Register</a>
+      <a href="/login" class="btn btn-success btn-lg">Login</a>
+    {% endif %}
+
+</div>
+
+{% endblock %}

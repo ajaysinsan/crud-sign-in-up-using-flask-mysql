@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>Login</h1>
+
+  <form method="POST" action="">
+
+    <div class="form-group">
+
+        <dt><label for="username">Username</label>
+        <dd><input class="form-control" id="username" maxlength="25" minlength="4" required name="username" type="text" value="">
+        </dd>
+
+    </div>
+
+    <div class="form-group">
+
+        <dt><label for="password">Password</label>
+        <dd><input class="form-control" id="password" name="password" required type="password" value="">
+        </dd>
+          
+    </div>
+  
+
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+    </div>
+
+</form>
+
+{% endblock %}

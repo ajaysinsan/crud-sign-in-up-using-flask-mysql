@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>Dashboard <small>Welcome {{session.username}}</small></h1>
+<hr>
+<a class="btn btn-success" href="/add-article">Add Article</a>
+<hr>
+
+<table class="table table-stripped">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Date</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+
+    {% for obj in articles %}
+    <tr>
+        <td>{{obj.id}}</td>
+        <td>{{obj.title}}</td>
+        <td>{{obj.author}}</td>
+        <td>{{obj.created_at}}</td>
+        <td><a href="/edit-article/{{obj.id}}" class="btn btn-info btn-sm">Edit</a></td>
+        <td><a href="/delete-article/{{obj.id}}" class="btn btn-danger btn-sm">Delete</a></td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

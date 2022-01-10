@@ -1,6 +1,6 @@
 # My Flask APP
 
- CRUD in Flask using MySQL DB
+ CRUD and SignIn/Up in Flask using MySQL DB
 
 ## Clone
 
